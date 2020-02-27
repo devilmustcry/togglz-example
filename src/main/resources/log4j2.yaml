@@ -1,0 +1,31 @@
+Configuration:
+  status: error
+  name: PropertiesConfig
+  Appenders:
+    Console:
+      PatternLayout:
+        pattern: '%m%n'
+      name: Console
+      target: SYSTEM_OUT
+
+  Loggers:
+    logger:
+      - name: com.example.toggle
+        level: all
+        additivity: false
+        AppenderRef:
+          ref: Console
+#      - name: org.hibernate.SQL
+#        level: ALL
+#        additivity: false
+#        AppenderRef:
+#          ref: Console
+      # - name: org.hibernate.type
+      #   level: TRACE
+      #   additivity: false
+      #   AppenderRef:
+      #     ref: Console
+    Root:
+      level: ALL
+      AppenderRef:
+        ref: Console
